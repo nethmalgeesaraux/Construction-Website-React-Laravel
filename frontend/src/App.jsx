@@ -1,11 +1,19 @@
-import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Components/frontend/Home';
+import About from './Components/frontend/About';
+import './assets/css/style.scss';
 
 function App() {
 
   return (
     <>
-     <button className="btn btn-primary">click</button>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+           <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
