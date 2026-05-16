@@ -32,6 +32,8 @@ const Home = () => {
                                 <span>Welcome Amazing Constructions</span>
                                 <h1>Crafting dreams with <br />precision and excellence.</h1>
                                 <p>We excel at transforming visions into reality through outstanding craftsmanship and precise</p>
+                                <a className='btn btn-primary'>Contact Now</a>
+                                <a className='btn btn-secondary'>View Projects</a>
                             </div>
                         </div>
                     </div>

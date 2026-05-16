@@ -36,7 +36,8 @@ header nav .logo span {
 }
 
 .section-1 .hero {
-  background-image: url("../hero.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url("");
+  min-height: 800px;
   min-height: 800px;
   color: #FFFFFF;
 }
@@ -44,5 +45,34 @@ header nav .logo span {
   color: #FFB703;
   font-size: 1.5em;
   font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #fe538d;
+  border: 1px solid #fe538d;
+  padding: 15px 20px;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.btn-primary:hover {
+  background-color: #FFB703;
+  border: 1px solid #FFB703;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  padding: 15px 20px;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-left: 20px;
+}
+.btn-secondary:hover {
+  background-color: #FFFFFF;
+  color: #000;
+  border: 1px solid #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */
