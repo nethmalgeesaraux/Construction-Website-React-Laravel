@@ -19,34 +19,6 @@ p {
   font-size: 1.2em;
 }
 
-header nav .nav-link {
-  font-size: 1em;
-  color: #000;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-left: 20px;
-}
-header nav .logo {
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: 500;
-}
-header nav .logo span {
-  color: #fe538d;
-}
-
-.section-1 .hero {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url("");
-  min-height: 800px;
-  min-height: 800px;
-  color: #FFFFFF;
-}
-.section-1 .hero span {
-  color: #FFB703;
-  font-size: 1.5em;
-  font-weight: 500;
-}
-
 .btn-primary {
   background-color: #fe538d;
   border: 1px solid #fe538d;
@@ -74,5 +46,44 @@ header nav .logo span {
   background-color: #FFFFFF;
   color: #000;
   border: 1px solid #FFFFFF;
+}
+
+header nav .nav-link {
+  font-size: 1em;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 20px;
+}
+header nav .logo {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 500;
+}
+header nav .logo span {
+  color: #fe538d;
+}
+
+.section-1 .hero {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url("../hero.jpg");
+  min-height: 800px;
+  min-height: 800px;
+  color: #FFFFFF;
+}
+.section-1 .hero span {
+  color: #FFB703;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.section-2 img {
+  border-radius: 40px;
+}
+.section-2 span {
+  color: #fe538d;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 /*# sourceMappingURL=style.css.map */
