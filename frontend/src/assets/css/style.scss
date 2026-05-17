@@ -50,8 +50,8 @@ li {
     text-transform: uppercase;
 
     &:hover {
-        background-color: $secondary-color;
-        border: 1px solid $secondary-color;
+        background-color: $text-white;
+        color: $text-color;
     }
 }
 
@@ -139,7 +139,7 @@ footer {
         transition: color 0.25s ease;
 
         &:hover {
-            color: $secondary-color;
+            color: $primary-color;
         }
     }
 

@@ -38,8 +38,8 @@ li {
   text-transform: uppercase;
 }
 .btn-primary:hover {
-  background-color: #FFB703;
-  border: 1px solid #FFB703;
+  background-color: #FFFFFF;
+  color: #000;
 }
 
 .btn-secondary {
@@ -112,7 +112,7 @@ footer a {
   transition: color 0.25s ease;
 }
 footer a:hover {
-  color: #FFB703;
+  color: #fe538d;
 }
 footer .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
