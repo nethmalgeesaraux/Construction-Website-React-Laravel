@@ -3,6 +3,8 @@ $primary-color: #fe538d;
 $secondary-color: #FFB703;
 $text-color: #000;
 $text-white: #FFFFFF;
+$dark-background: #222725;
+
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
@@ -26,6 +28,17 @@ h3 {
 p {
     font-size: 1.2em;
 }
+
+ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+    margin-left: 0;
+}
+
 
 
 .btn-primary {
@@ -79,6 +92,90 @@ header {
             }
         }
     }
+}
+
+footer {
+    background-color: $dark-background;
+    color: $text-white;
+
+    .footer-wrap {
+        padding-top: 4.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer-top {
+        row-gap: 2.25rem;
+    }
+
+    .footer-col {
+        padding-right: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        color: $secondary-color;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.82);
+    }
+
+    .footer-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    li {
+        padding: 0;
+    }
+
+    a {
+        color: $text-white;
+        font-size: 1.2em;
+        text-decoration: none;
+        transition: color 0.25s ease;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 0.9em;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 2.5rem;
+        padding-top: 1.5rem;
+    }
+
+    @media (max-width: 991.98px) {
+        .footer-wrap {
+            padding-top: 3.5rem;
+        }
+
+        .footer-col {
+            padding-right: 0.75rem;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .footer-wrap {
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .footer-col {
+            padding-right: 0;
+        }
+
+        a {
+            font-size: 1.05em;
+        }
+    }
+
 }
 
 .section-1 {

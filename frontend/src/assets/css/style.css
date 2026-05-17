@@ -19,6 +19,16 @@ p {
   font-size: 1.2em;
 }
 
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+  margin-left: 0;
+}
+
 .btn-primary {
   background-color: #fe538d;
   border: 1px solid #fe538d;
@@ -62,6 +72,74 @@ header nav .logo {
 }
 header nav .logo span {
   color: #fe538d;
+}
+
+footer {
+  background-color: #222725;
+  color: #FFFFFF;
+}
+footer .footer-wrap {
+  padding-top: 4.5rem;
+  padding-bottom: 2rem;
+}
+footer .footer-top {
+  row-gap: 2.25rem;
+}
+footer .footer-col {
+  padding-right: 1.25rem;
+}
+footer h3 {
+  font-size: 1.5em;
+  color: #FFB703;
+  margin-bottom: 1rem;
+}
+footer p {
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.82);
+}
+footer .footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+footer li {
+  padding: 0;
+}
+footer a {
+  color: #FFFFFF;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+footer a:hover {
+  color: #FFB703;
+}
+footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+}
+@media (max-width: 991.98px) {
+  footer .footer-wrap {
+    padding-top: 3.5rem;
+  }
+  footer .footer-col {
+    padding-right: 0.75rem;
+  }
+}
+@media (max-width: 575.98px) {
+  footer .footer-wrap {
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+  }
+  footer .footer-col {
+    padding-right: 0;
+  }
+  footer a {
+    font-size: 1.05em;
+  }
 }
 
 .section-1 .hero {
