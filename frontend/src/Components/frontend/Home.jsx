@@ -2,6 +2,13 @@ import AboutImg from '../../assets/about-us.jpg';
 import Footer from '../pages/Footer';
 import Hearder from '../pages/Header';
 import ServiceImg from '../../assets/construction1.jpg';
+import ServiceImg2 from '../../assets/construction2.jpg';
+import ServiceImg3 from '../../assets/construction3.jpg';
+import ServiceImg4 from '../../assets/construction6.jpg';
+import ProjectImg from '../../assets/construction4.jpg';
+import ProjectImg2 from '../../assets/construction7.jpg';
+import ProjectImg3 from '../../assets/construction8.jpg';
+import ProjectImg4 from '../../assets/construction9.jpg';
 
 
 const Home = () => {
@@ -69,13 +76,12 @@ const Home = () => {
                                     </div>
                                     <div className='service-body'>
                                         <div className='service-title'>
-                                            <h3>Specialty Construction</h3>
+                                            <h3>Residential Construction</h3>
                                         </div>
                                         <div className='service-content'>
                                             <p>
-                                                Specialty construction is a niche sector within the construction
-                                                industry that focuses on projects requiring specialized skills,
-                                                materials, and techniques.
+                                                We build safe and modern homes with quality materials,
+                                                smart layouts, and reliable project timelines.
                                             </p>
                                         </div>
                                         <a href='#' className='btn btn-primary'>Read More</a>
@@ -86,39 +92,16 @@ const Home = () => {
                             <div className='col-md-3 col-lg-3'>
                                 <div className='item'>
                                     <div className='service-image'>
-                                        <img src={ServiceImg} className='w-100' />
+                                        <img src={ServiceImg2} className='w-100' />
                                     </div>
                                     <div className='service-body'>
                                         <div className='service-title'>
-                                            <h3>Specialty Construction</h3>
+                                            <h3>Commercial Projects</h3>
                                         </div>
                                         <div className='service-content'>
                                             <p>
-                                                Specialty construction is a niche sector within the construction
-                                                industry that focuses on projects requiring specialized skills,
-                                                materials, and techniques.
-                                            </p>
-                                        </div>
-                                        <a href='#' className='btn btn-primary'>Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div className='col-md-3 col-lg-3'>
-                                <div className='item'>
-                                    <div className='service-image'>
-                                        <img src={ServiceImg} className='w-100' />
-                                    </div>
-                                    <div className='service-body'>
-                                        <div className='service-title'>
-                                            <h3>Specialty Construction</h3>
-                                        </div>
-                                        <div className='service-content'>
-                                            <p>
-                                                Specialty construction is a niche sector within the construction
-                                                industry that focuses on projects requiring specialized skills,
-                                                materials, and techniques.
+                                                From offices to retail spaces, we deliver durable commercial
+                                                buildings designed for performance and growth.
                                             </p>
                                         </div>
                                         <a href='#' className='btn btn-primary'>Read More</a>
@@ -130,7 +113,28 @@ const Home = () => {
                             <div className='col-md-3 col-lg-3'>
                                 <div className='item'>
                                     <div className='service-image'>
-                                        <img src={ServiceImg} className='w-100' />
+                                        <img src={ServiceImg3} className='w-100' />
+                                    </div>
+                                    <div className='service-body'>
+                                        <div className='service-title'>
+                                            <h3>Renovation Services</h3>
+                                        </div>
+                                        <div className='service-content'>
+                                            <p>
+                                                We upgrade existing spaces with practical redesigns,
+                                                structural improvements, and clean finishing.
+                                            </p>
+                                        </div>
+                                        <a href='#' className='btn btn-primary'>Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div className='col-md-3 col-lg-3'>
+                                <div className='item'>
+                                    <div className='service-image'>
+                                        <img src={ServiceImg4} className='w-100' />
                                     </div>
                                     <div className='service-body'>
                                         <div className='service-title'>
@@ -138,9 +142,8 @@ const Home = () => {
                                         </div>
                                         <div className='service-content'>
                                             <p>
-                                                Specialty construction is a niche sector within the construction
-                                                industry that focuses on projects requiring specialized skills,
-                                                materials, and techniques.
+                                                Our team handles specialized builds that require technical
+                                                expertise, precision, and custom construction methods.
                                             </p>
                                         </div>
                                         <a href='#' className='btn btn-primary'>Read More</a>
@@ -172,6 +175,105 @@ const Home = () => {
                 </section>
 
 
+                {/* Our Project Section */}
+                <section class="section-3 bg-light py-5">
+                    <div class="container-fluid py-5">
+                        <div class="section-header text-center">
+                            <span>our Projects</span>
+                            <h2>Our featured projects</h2>
+                            <p>
+                                Explore selected projects completed by our team across residential,
+                                commercial, renovation, and custom construction categories.
+                            </p>
+                        </div>
+
+                        <div className='row pt-4'>
+                            <div className='col-md-3 col-lg-3'>
+                                <div className='item'>
+                                    <div className='service-image'>
+                                        <img src={ProjectImg} className='w-100' />
+                                    </div>
+                                    <div className='service-body'>
+                                        <div className='service-title'>
+                                            <h3>Modern Villa Build</h3>
+                                        </div>
+                                        <div className='service-content'>
+                                            <p>
+                                                A complete residential build focused on open-space living,
+                                                premium finishes, and long-term structural quality.
+                                            </p>
+                                        </div>
+                                        <a href='#' className='btn btn-primary'>Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='col-md-3 col-lg-3'>
+                                <div className='item'>
+                                    <div className='service-image'>
+                                        <img src={ProjectImg2} className='w-100' />
+                                    </div>
+                                    <div className='service-body'>
+                                        <div className='service-title'>
+                                            <h3>Retail Complex Project</h3>
+                                        </div>
+                                        <div className='service-content'>
+                                            <p>
+                                                A commercial development delivered with efficient scheduling,
+                                                durable materials, and functional storefront planning.
+                                            </p>
+                                        </div>
+                                        <a href='#' className='btn btn-primary'>Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div className='col-md-3 col-lg-3'>
+                                <div className='item'>
+                                    <div className='service-image'>
+                                        <img src={ProjectImg3} className='w-100' />
+                                    </div>
+                                    <div className='service-body'>
+                                        <div className='service-title'>
+                                            <h3>Office Renovation</h3>
+                                        </div>
+                                        <div className='service-content'>
+                                            <p>
+                                                This renovation transformed an outdated office into a modern,
+                                                productive workspace with improved interior flow.
+                                            </p>
+                                        </div>
+                                        <a href='#' className='btn btn-primary'>Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div className='col-md-3 col-lg-3'>
+                                <div className='item'>
+                                    <div className='service-image'>
+                                        <img src={ProjectImg4} className='w-100' />
+                                    </div>
+                                    <div className='service-body'>
+                                        <div className='service-title'>
+                                            <h3>Custom Industrial Unit</h3>
+                                        </div>
+                                        <div className='service-content'>
+                                            <p>
+                                                A specialized industrial project completed with custom engineering
+                                                solutions for operational safety and performance.
+                                            </p>
+                                        </div>
+                                        <a href='#' className='btn btn-primary'>Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
 
             </main>
 
