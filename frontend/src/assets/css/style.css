@@ -222,4 +222,51 @@ footer .footer-bottom {
   transition: all 0.4s ease-in-out;
   opacity: 0;
 }
+
+.section-4 .section-header {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.section-4 .section-header h2 {
+  color: #232a34;
+  font-weight: 700;
+}
+.section-4 .section-header p {
+  color: #1f2d3d;
+  line-height: 1.5;
+}
+.section-4 .why-card {
+  background: #f4f4f4;
+  border-radius: 28px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.8rem 1.6rem;
+}
+.section-4 .why-icon {
+  color: #f5a300;
+  margin-bottom: 1.1rem;
+}
+.section-4 .why-card h3 {
+  font-size: 2.05rem;
+  margin-bottom: 1rem;
+  color: #0f2238;
+}
+.section-4 .why-card p {
+  color: #1f2d3d;
+  line-height: 1.45;
+}
+
+@media (max-width: 991.98px) {
+  .section-4 .why-card h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-4 .why-card {
+    padding: 1.5rem 1.35rem;
+  }
+  .section-4 .why-card h3 {
+    font-size: 1.45rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
