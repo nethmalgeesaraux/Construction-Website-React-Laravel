@@ -9,6 +9,10 @@ import ProjectImg from '../../assets/construction4.jpg';
 import ProjectImg2 from '../../assets/construction7.jpg';
 import ProjectImg3 from '../../assets/construction8.jpg';
 import ProjectImg4 from '../../assets/construction9.jpg';
+import AvatarImg from '../../assets/author-2.jpg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
 
 
 const Home = () => {
@@ -343,6 +347,104 @@ const Home = () => {
                                 commercial, and industrial projects.
                             </p>
                         </div>
+
+                        <Swiper
+                            spaceBetween={50}
+                            slidesPerView={3}
+                            onSlideChange={() => console.log('slide change')}
+                            onSwiper={(swiper) => console.log(swiper)}
+                        >
+                            <SwiperSlide>
+
+                                <div className="card shadow border-0">
+                                    <div className="card-body p-4">
+                                        <div className="rating">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                width="20"
+                                                height="20"
+                                                fill="currentColor"
+                                                class="bi bi-star-fill"
+                                                viewBox="0 0 16 16">
+                                                <path d="M3.612 15.443c-.386.198-.824.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.951l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 
+                                                        4.898.696c.441.062.612.633.282.951l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 
+                                                        13.187l-4.389 2.256z"/>
+                                            </svg>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                width="20"
+                                                height="20"
+                                                fill="currentColor"
+                                                class="bi bi-star-fill"
+                                                viewBox="0 0 16 16">
+                                                <path d="M3.612 15.443c-.386.198-.824.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.951l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 
+                                                        4.898.696c.441.062.612.633.282.951l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 
+                                                        13.187l-4.389 2.256z"/>
+                                            </svg>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                width="20"
+                                                height="20"
+                                                fill="currentColor"
+                                                class="bi bi-star-fill"
+                                                viewBox="0 0 16 16">
+                                                <path d="M3.612 15.443c-.386.198-.824.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.951l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 
+                                                        4.898.696c.441.062.612.633.282.951l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 
+                                                        13.187l-4.389 2.256z"/>
+                                            </svg>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                width="20"
+                                                height="20"
+                                                fill="currentColor"
+                                                class="bi bi-star-fill"
+                                                viewBox="0 0 16 16">
+                                                <path d="M3.612 15.443c-.386.198-.824.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.951l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 
+                                                        4.898.696c.441.062.612.633.282.951l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 
+                                                        13.187l-4.389 2.256z"/>
+                                            </svg>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                width="20"
+                                                height="20"
+                                                fill="currentColor"
+                                                class="bi bi-star-fill"
+                                                viewBox="0 0 16 16">
+                                                <path d="M3.612 15.443c-.386.198-.824.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.951l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 
+                                                        4.898.696c.441.062.612.633.282.951l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 
+                                                        13.187l-4.389 2.256z"/>
+                                            </svg>
+                                        </div>
+
+                                        <div className='content pt-3 pb-2'>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio odit
+                                                itaque, molestias quam quibusdam voluptatem aliquid rem blanditiis earum
+                                                dolorem. Repellendus ad ipsam, asperiores veniam voluptates dignissimos?
+                                                Provident, eum doloribus?
+                                            </p>
+                                        </div>
+                                        <hr />
+
+                                        <div className='d-flex'>
+                                            <div>
+                                                <img src={AvatarImg} alt="" width={50} />
+                                            </div>
+                                            <div className='ps-3'>
+                                                <div className='name'>John Doe</div>
+                                                <div>CEO</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </SwiperSlide>
+                            <SwiperSlide>Slide 2</SwiperSlide>
+                            <SwiperSlide>Slide 3</SwiperSlide>
+                            <SwiperSlide>Slide 4</SwiperSlide>
+
+                        </Swiper>
+
                     </div>
                 </section>
 

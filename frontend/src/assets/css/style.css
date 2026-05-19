@@ -241,10 +241,6 @@ footer .footer-bottom {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   padding: 1.8rem 1.6rem;
 }
-.section-4 .why-icon {
-  color: #f5a300;
-  margin-bottom: 1.1rem;
-}
 .section-4 .why-card h3 {
   font-size: 2.05rem;
   margin-bottom: 1rem;
@@ -254,13 +250,16 @@ footer .footer-bottom {
   color: #1f2d3d;
   line-height: 1.45;
 }
+.section-4 .why-icon {
+  color: #f5a300;
+  margin-bottom: 1.1rem;
+}
 
 @media (max-width: 991.98px) {
   .section-4 .why-card h3 {
     font-size: 1.7rem;
   }
 }
-
 @media (max-width: 767.98px) {
   .section-4 .why-card {
     padding: 1.5rem 1.35rem;
@@ -268,5 +267,21 @@ footer .footer-bottom {
   .section-4 .why-card h3 {
     font-size: 1.45rem;
   }
+}
+.section-5 .swiper {
+  padding: 25px;
+}
+.section-5 .card-body .rating {
+  color: #FFB703;
+}
+.section-5 .card-body .content p {
+  font-size: 1em;
+}
+.section-5 .card-body .meta img {
+  border-radius: 50%;
+}
+.section-5 .card-body .name {
+  font-size: 1.3em;
+  font-weight: 500;
 }
 /*# sourceMappingURL=style.css.map */

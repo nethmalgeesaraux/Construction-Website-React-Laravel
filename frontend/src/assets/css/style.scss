@@ -348,3 +348,36 @@ footer {
         font-size: 1.45rem;
     }
 }
+
+.section-5 {
+
+    .swiper {
+        padding: 25px;
+    }
+
+    .card-body {
+        .rating {
+            color: $secondary-color;
+        }
+
+        .content {
+            p {
+                font-size: 1em;
+            }
+        }
+
+        .meta {
+            img {
+                border-radius: 50%;
+
+            }
+        }
+
+
+        .name {
+
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+    }
+}
