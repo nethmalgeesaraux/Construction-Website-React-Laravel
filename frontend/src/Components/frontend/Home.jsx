@@ -12,6 +12,9 @@ import ProjectImg4 from '../../assets/construction9.jpg';
 import AvatarImg from '../../assets/author-2.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+
 
 
 
@@ -349,10 +352,11 @@ const Home = () => {
                         </div>
 
                         <Swiper
+                            modules={[Pagination]}
                             spaceBetween={50}
                             slidesPerView={3}
-                            onSlideChange={() => console.log('slide change')}
-                            onSwiper={(swiper) => console.log(swiper)}
+                            pagination={{ clickable: true }}
+
                         >
                             <SwiperSlide>
 
@@ -439,6 +443,7 @@ const Home = () => {
                                 </div>
 
                             </SwiperSlide>
+
                             <SwiperSlide>
 
                                 <div className="card shadow border-0">
@@ -524,7 +529,8 @@ const Home = () => {
                                 </div>
 
                             </SwiperSlide>
-                             <SwiperSlide>
+
+                            <SwiperSlide>
 
                                 <div className="card shadow border-0">
                                     <div className="card-body p-5">
@@ -609,7 +615,8 @@ const Home = () => {
                                 </div>
 
                             </SwiperSlide>
-                             <SwiperSlide>
+
+                            <SwiperSlide>
 
                                 <div className="card shadow border-0">
                                     <div className="card-body p-5">

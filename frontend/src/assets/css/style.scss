@@ -355,6 +355,19 @@ footer {
         padding: 25px;
     }
 
+    .swiper-pagination {
+        bottom: -6px !important;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #d0d0d0;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $secondary-color;
+    }
+
     .card-body {
         background: #f4f4f4;
         padding: 1.8rem 1.6rem;
