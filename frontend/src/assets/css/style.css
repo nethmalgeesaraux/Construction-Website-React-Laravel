@@ -271,6 +271,16 @@ footer .footer-bottom {
 .section-5 .swiper {
   padding: 25px;
 }
+.section-5 .swiper-pagination {
+  bottom: -6px !important;
+}
+.section-5 .swiper-pagination-bullet {
+  background-color: #d0d0d0;
+  opacity: 1;
+}
+.section-5 .swiper-pagination-bullet-active {
+  background-color: #FFB703;
+}
 .section-5 .card-body {
   background: #f4f4f4;
   padding: 1.8rem 1.6rem;
@@ -290,5 +300,9 @@ footer .footer-bottom {
 .section-5 .card-body .name {
   font-size: 1.3em;
   font-weight: 500;
+}
+
+.section-6 .card .card-body a {
+  font-size: 1.5em;
 }
 /*# sourceMappingURL=style.css.map */
