@@ -356,6 +356,12 @@ footer {
     }
 
     .card-body {
+        background: #f4f4f4;
+        padding: 1.8rem 1.6rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        margin: 0 auto;
+        max-width: 980px;
+
         .rating {
             color: $secondary-color;
         }

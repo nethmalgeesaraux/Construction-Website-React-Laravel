@@ -271,6 +271,13 @@ footer .footer-bottom {
 .section-5 .swiper {
   padding: 25px;
 }
+.section-5 .card-body {
+  background: #f4f4f4;
+  padding: 1.8rem 1.6rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+  max-width: 980px;
+}
 .section-5 .card-body .rating {
   color: #FFB703;
 }
