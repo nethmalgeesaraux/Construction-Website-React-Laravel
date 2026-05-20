@@ -707,6 +707,18 @@ const Home = () => {
                     </div>
                 </section>
 
+                {/* Blog & News Section */}
+                <section className='section-6 bg-light py-5'>
+                    <div className='container'>
+                        <div className='section-header text-center'>
+                            <span>Blog & News</span>
+                            <h2>Articles & blog posts</h2>
+                            <p>Our expertise ensures quality results, innovative solutions, and long‑lasting value for every client we serve.</p>
+                        </div>
+                    </div>
+                </section>
+
+
 
             </main>
 
