@@ -356,14 +356,164 @@ footer .footer-bottom {
   font-weight: 500;
 }
 
-.section-8 .card {
-  border-radius: 40px;
+.section-8 {
+  background-color: #e9ecef;
 }
-.section-8 .card img {
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+.section-8 .team-card {
+  height: 100%;
+  border-radius: 34px;
+  overflow: hidden;
+  background-color: #ececec;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
-.section-8 .card .card-body a.title {
-  font-size: 1.4em;
+.section-8 .team-image-wrap {
+  background-color: #e4e4e4;
+}
+.section-8 .team-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1.24;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section-8 .team-body {
+  padding: 1.7rem 1.65rem 1.45rem;
+}
+.section-8 .team-body h3 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #0f1723;
+}
+.section-8 .team-body p {
+  margin: 0.55rem 0 0.9rem;
+  font-size: 0.92rem;
+  color: #81858e;
+}
+.section-8 .team-linkedin {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  color: #000;
+}
+.section-8 .team-linkedin svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.section-9 {
+  background-color: #ececec;
+}
+.section-9 .contact-header {
+  margin-bottom: 2.6rem;
+}
+.section-9 .contact-header h2 {
+  margin-bottom: 0.8rem;
+  font-size: 3.65rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #0f2136;
+}
+.section-9 .contact-header p {
+  margin: 0 auto;
+  max-width: 760px;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  color: #0f2136;
+}
+.section-9 .contact-info-card {
+  background-color: #efefef;
+  border-radius: 2.2rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  padding: 1.7rem 1.4rem;
+  max-width: 320px;
+}
+.section-9 .contact-info-card h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.55rem;
+  color: #1f334a;
+  font-weight: 0;
+}
+.section-9 .contact-info-card p {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #24384f;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.section-9 .contact-info-card h3:not(:first-child) {
+  margin-top: 1.45rem;
+}
+.section-9 .contact-form-card {
+  background-color: #efefef;
+  border-radius: 2.2rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  padding: 2.3rem 2.4rem 2.2rem;
+}
+.section-9 label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 1.1rem;
+  color: #101e31;
+}
+.section-9 .form-control {
+  background-color: #efefef;
+  border: 1px solid #c8cfd7;
+  border-radius: 10px;
+  min-height: 50px;
+  padding: 0.7rem 1rem;
+  font-size: 1.05rem;
+  color: #273445;
+}
+.section-9 .form-control::-moz-placeholder {
+  color: #5d6875;
+}
+.section-9 .form-control::placeholder {
+  color: #5d6875;
+}
+.section-9 .form-control:focus {
+  border-color: #8aa0b8;
+  box-shadow: none;
+  background-color: #efefef;
+}
+.section-9 textarea.form-control {
+  min-height: 210px;
+  resize: vertical;
+}
+.section-9 .contact-submit-btn {
+  background-color: #fe538d;
+  border: 1px solid #fe538d;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.7rem 1.45rem;
+  text-transform: uppercase;
+}
+.section-9 .contact-submit-btn:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
+}
+@media (max-width: 991.98px) {
+  .section-9 .contact-info-card {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-9 .contact-header h2 {
+    font-size: 2.7rem;
+  }
+  .section-9 .contact-header p {
+    font-size: 1.05rem;
+  }
+  .section-9 .contact-form-card {
+    padding: 1.5rem 1.2rem;
+  }
+  .section-9 .contact-info-card h3 {
+    font-size: 1.7rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
