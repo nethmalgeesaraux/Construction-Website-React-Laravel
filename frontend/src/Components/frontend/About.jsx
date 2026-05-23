@@ -1,5 +1,5 @@
-import Footer from '../pages/Footer';
-import Hearder from '../pages/Header';
+import Footer from '../common/Footer';
+import Hearder from '../common/Header';
 import AboutImg from '../../assets/about-us.jpg';
 import teamImgTwo from '../../assets/team2.jpg';
 import AvatarImg from '../../assets/author-2.jpg';

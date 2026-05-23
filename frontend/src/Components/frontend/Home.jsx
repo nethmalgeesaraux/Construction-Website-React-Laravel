@@ -1,6 +1,6 @@
 import AboutImg from '../../assets/about-us.jpg';
-import Footer from '../pages/Footer';
-import Hearder from '../pages/Header';
+import Footer from '../common/Footer';
+import Header from '../common/Header';
 import ServiceImg from '../../assets/construction1.jpg';
 import ServiceImg2 from '../../assets/construction2.jpg';
 import ServiceImg3 from '../../assets/construction3.jpg';
@@ -23,7 +23,7 @@ const Home = () => {
     return (
         <>
 
-            <Hearder />
+            <Header />
 
             <main>
 
