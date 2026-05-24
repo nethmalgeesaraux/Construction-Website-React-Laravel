@@ -30,7 +30,7 @@ class AuthenticationController extends Controller
                 'password' => $request->password,
             ];
 
-            if (Auth::attempt($credentials)) {   
+            if (Auth::attempt($credentials)) {
 
                 $user = User::find(Auth::user()->id);
 
@@ -49,5 +49,16 @@ class AuthenticationController extends Controller
                 ]);
             }
         }
+    }
+
+    public function logout(){
+        
+        $user = User::find(Auth::user()->id);
+        $user->tokens()->delete();
+
+        return response()->json([
+            'status' => true,
+            'message' => 'Logout successfully.'
+        ]);
     }
 }
