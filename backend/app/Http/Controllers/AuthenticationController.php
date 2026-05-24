@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -29,7 +30,18 @@ class AuthenticationController extends Controller
                 'password' => $request->password,
             ];
 
-            if (Auth::attempt($credentials)) {
+            if (Auth::attempt($credentials)) {   
+
+                $user = User::find(Auth::user()->id);
+
+                $token = $user->createToken('token')->plainTextToken;
+
+                return response()->json([
+                    'status' => true,
+                    'message' => 'User authenticated successfully.',
+                    'token' => $token,
+                    'id' => Auth::user()->id
+                ]);
             } else {
                 return response()->json([
                     'status' => false,
