@@ -579,4 +579,8 @@ footer .footer-bottom {
     padding: 1.7rem 1.25rem !important;
   }
 }
+
+.dashboard .card {
+  min-height: 400px;
+}
 /*# sourceMappingURL=style.css.map */
