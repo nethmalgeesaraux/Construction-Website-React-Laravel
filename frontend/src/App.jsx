@@ -7,6 +7,7 @@ import Projects from './Components/frontend/Projects';
 import Blogs from './Components/frontend/Blogs';
 import ContactUs from './Components/frontend/ContactUs';
 import './assets/css/style.scss';
+import Login from './Components/backend/Login';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/admin/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -654,3 +654,75 @@ footer {
         }
     }
 }
+
+.admin-login-page {
+    background: linear-gradient(180deg, #f5f7fa 0%, #eceff3 100%);
+    padding: 1rem 0 2rem;
+
+    .login-form {
+        max-width: 560px;
+    }
+
+    .card {
+        border-radius: 18px;
+        background-color: #ffffff;
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    .card-body {
+        padding: 2.2rem 2rem !important;
+    }
+
+    h4 {
+        color: #111827;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+    }
+
+    .form-label {
+        color: #1f2937;
+        font-weight: 500;
+        margin-bottom: 0.45rem;
+    }
+
+    .form-control {
+        border: 1px solid #cfd5dd;
+        border-radius: 10px;
+        min-height: 46px;
+        padding: 0.65rem 0.85rem;
+        color: #1f2937;
+
+        &::placeholder {
+            color: #8892a0;
+        }
+
+        &:focus {
+            border-color: #fe538d;
+            box-shadow: 0 0 0 0.2rem rgba(254, 83, 141, 0.18);
+        }
+    }
+
+    .btn-primary {
+        width: 100%;
+        border-radius: 10px;
+        padding: 0.8rem 1rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 991.98px) {
+        .login-form {
+            width: 70% !important;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .login-form {
+            width: 100% !important;
+        }
+
+        .card-body {
+            padding: 1.7rem 1.25rem !important;
+        }
+    }
+}
