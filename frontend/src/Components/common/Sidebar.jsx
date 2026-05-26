@@ -1,0 +1,21 @@
+
+
+const Sidebar = () => {
+    return (
+        <div className='card shadow border-0'>
+            <div className='card-body'>
+                <h4>sidebar</h4>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><button class="btn btn-primary">Logout</button></li>
+                </ul>
+
+            </div>
+        </div>
+    )
+}
+
+export default Sidebar
