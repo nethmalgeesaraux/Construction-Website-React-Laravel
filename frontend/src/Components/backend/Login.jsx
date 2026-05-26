@@ -3,10 +3,13 @@ import Footer from "../common/Footer"
 import Header from "../common/Header"
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./context/Auth";
 
 const Login = () => {
 
     const navigate = useNavigate();
+    const { login } = useContext(AuthContext);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const showPassword = watch("showPassword", false);
 
@@ -32,6 +35,7 @@ const Login = () => {
             }
 
             localStorage.setItem('userInfo', JSON.stringify(userInfo))
+            login(userInfo);
 
             navigate("/admin/dashboard")
         }
