@@ -5,6 +5,7 @@ use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\AuthenticationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\TempImageController;
 
 Route::post('authenticate', [AuthenticationController::class, 'authenticate']);
 
@@ -20,4 +21,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     // Service Routes
     Route::post('services', [ServiceController::class, 'store']);
     Route::get('services', [ServiceController::class, 'index']);
+
+    // Temp Image Routes
+    Route::post('temp-images', [TempImageController::class, 'store']);
 });
