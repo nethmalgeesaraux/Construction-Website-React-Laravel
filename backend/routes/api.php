@@ -19,4 +19,5 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     // Service Routes
     Route::post('services', [ServiceController::class, 'store']);
+    Route::get('services', [ServiceController::class, 'index']);
 });
