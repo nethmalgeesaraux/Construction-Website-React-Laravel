@@ -727,8 +727,69 @@ footer {
     }
 }
 
-.dashboard{
-    .card{
+.dashboard {
+    .card {
         min-height: 400px;
+    }
+}
+
+.sidebar {
+    padding: 1rem 1.05rem 1.1rem;
+
+    .sidebar-title {
+        margin: 0 0 0.9rem;
+        font-size: 1.65rem;
+        font-weight: 700;
+        color: #212121;
+    }
+
+    .sidebar-nav {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar-link {
+        display: block;
+        padding: 0.52rem 0;
+        border-bottom: 1px solid #ebebeb;
+        color: #2a2a2a;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &.active {
+            color: #f28bb2;
+        }
+    }
+
+    .sidebar-logout-btn {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        padding: 0.4rem 0.8rem;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: #ff3f82;
+            border-color: #ff3f82;
+            color: #fff;
+        }
+    }
+}
+
+.admin-sidebar-card {
+    border-radius: 2px;
+
+    .card-body {
+        min-height: 230px;
     }
 }

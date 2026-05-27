@@ -583,4 +583,10 @@ footer .footer-bottom {
 .dashboard .card {
   min-height: 400px;
 }
+
+.sidebar ul li a {
+  display: inline-block;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
 /*# sourceMappingURL=style.css.map */
