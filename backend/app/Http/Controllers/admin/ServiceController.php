@@ -8,6 +8,7 @@ use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use App\Models\TempImage;
 
 class ServiceController extends Controller
 {
@@ -81,10 +82,10 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-            // return response()->json([
-            //     'status' => true,
-            //     'data' => $service
-            // ]);
+        // return response()->json([
+        //     'status' => true,
+        //     'data' => $service
+        // ]);
     }
 
     /**
@@ -119,6 +120,33 @@ class ServiceController extends Controller
         $service->content = $request->content;
         $service->status = $request->status;
         $service->save();
+
+
+        // Save Temp Image here
+        if ($request->imageId > 0) {
+            $tempImage = TempImage::find($request->imageId);
+            if ($tempImage != null) {
+                $extArray = explode('.', $tempImage->name);
+                $ext = last($extArray);
+                $fileName = strtotime('now') . $service->id . '.' . $ext;
+                
+                // $sourcePath = public_path('uploads/temp/' . $tempImage->name);
+                // $destPath = public_path('uploads/services/' . $fileName);
+                // if (file_exists($sourcePath)) {
+                //     rename($sourcePath, $destPath);
+                //     $service->image = $fileName;
+                //     $service->save();
+                //     // Delete temp image record
+                //     $tempImage->delete();
+                // } else {
+                //     return response()->json([
+                //         'status' => false,
+                //         'message' => 'Temp image not found'
+                //     ], 404);
+
+            }
+        }
+
 
         return response()->json([
             'status' => true,
