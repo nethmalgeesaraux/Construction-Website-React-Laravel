@@ -59,9 +59,21 @@ class ServiceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Service $service)
+    public function show($id)
     {
-        //
+        $service = Service::find($id);
+
+        if (!$service) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Service not found'
+            ], 404);
+        }
+
+        return response()->json([
+            'status' => true,
+            'data' => $service
+        ]);
     }
 
     /**
@@ -78,11 +90,20 @@ class ServiceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Service $service)
+    public function update(Request $request, $id)
     {
+        $service = Service::find($id);
+
+        if (!$service) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Service not found'
+            ], 404);
+        }
+
         $validator = Validator::make($request->all(), [
             'title' => 'required',
-            'slug' => 'required|unique:services,slug,' . $service->id
+            'slug' => 'required|unique:services,slug,' . $id
         ]);
 
         if ($validator->fails()) {
