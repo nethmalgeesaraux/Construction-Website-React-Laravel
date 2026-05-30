@@ -80,29 +80,29 @@ class ServiceController extends Controller
      */
     public function update(Request $request, Service $service)
     {
-        // $validator = Validator::make($request->all(), [
-        //     'title' => 'required',
-        //     'slug' => 'required|unique:services,slug,' . $service->id
-        // ]);
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'slug' => 'required|unique:services,slug,' . $service->id
+        ]);
 
-        // if ($validator->fails()) {
-        //     return response()->json([
-        //         'status' => false,
-        //         'errors' => $validator->errors()
-        //     ]);
-        // }
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'errors' => $validator->errors()
+            ]);
+        }
 
-        // $service->title = $request->title;
-        // $service->short_desc = $request->short_desc;
-        // $service->slug = Str::slug($request->slug);
-        // $service->content = $request->content;
-        // $service->status = $request->status;
-        // $service->save();
+        $service->title = $request->title;
+        $service->short_desc = $request->short_desc;
+        $service->slug = Str::slug($request->slug);
+        $service->content = $request->content;
+        $service->status = $request->status;
+        $service->save();
 
-        // return response()->json([
-        //     'status' => true,
-        //     'message' => 'Service updated successfully'
-        // ]);
+        return response()->json([
+            'status' => true,
+            'message' => 'Service updated successfully'
+        ]);
     }
 
     /**
