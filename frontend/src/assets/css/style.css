@@ -584,9 +584,55 @@ footer .footer-bottom {
   min-height: 400px;
 }
 
-.sidebar ul li a {
-  display: inline-block;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+.sidebar {
+  padding: 1rem 1.05rem 1.1rem;
 }
-/*# sourceMappingURL=style.css.map */
+.sidebar .sidebar-title {
+  margin: 0 0 0.9rem;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #212121;
+}
+.sidebar .sidebar-nav {
+  margin: 0;
+  padding: 0;
+}
+.sidebar .sidebar-link {
+  display: block;
+  padding: 0.52rem 0;
+  border-bottom: 1px solid #ebebeb;
+  color: #2a2a2a;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.sidebar .sidebar-link:hover {
+  color: #fe538d;
+}
+.sidebar .sidebar-link.active {
+  color: #f28bb2;
+}
+.sidebar .sidebar-logout-btn {
+  background-color: #fe538d;
+  border: 1px solid #fe538d;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 0.4rem 0.8rem;
+  text-transform: uppercase;
+}
+.sidebar .sidebar-logout-btn:hover {
+  background-color: #ff3f82;
+  border-color: #ff3f82;
+  color: #fff;
+}
+
+.admin-sidebar-card {
+  border-radius: 2px;
+}
+.admin-sidebar-card .card-body {
+  min-height: 230px;
+}/*# sourceMappingURL=style.css.map */

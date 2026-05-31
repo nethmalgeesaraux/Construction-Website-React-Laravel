@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use App\Models\TempImage;
+use Intervention\Image\Drivers\Gd\Driver as GdDriver;
+use Intervention\Image\Drivers\Imagick\Driver as ImagickDriver;
+use Intervention\Image\ImageManager;
 
 class ServiceController extends Controller
 {
@@ -130,19 +133,28 @@ class ServiceController extends Controller
                 $ext = last($extArray);
                 $fileName = strtotime('now') . $service->id . '.' . $ext;
                 
-                // $sourcePath = public_path('uploads/temp/' . $tempImage->name);
-                // $destPath = public_path('uploads/services/' . $fileName);
-                // if (file_exists($sourcePath)) {
-                //     rename($sourcePath, $destPath);
-                //     $service->image = $fileName;
-                //     $service->save();
-                //     // Delete temp image record
-                //     $tempImage->delete();
-                // } else {
-                //     return response()->json([
-                //         'status' => false,
-                //         'message' => 'Temp image not found'
-                //     ], 404);
+                //create  small thumbnail here
+                $sourcePath = public_path('uploads/temp/' . $tempImage->name);
+                $destPath = public_path('uploads/services/thumb/' . $fileName);
+                if (!is_dir(public_path('uploads/services/thumb'))) {
+                    mkdir(public_path('uploads/services/thumb'), 0755, true);
+                }
+                if (extension_loaded('gd')) {
+                    $manager = new ImageManager(GdDriver::class);
+                    $image = $manager->decodePath($sourcePath);
+                    $image->coverDown(300, 300);
+                    $image->save($destPath);
+                } elseif (extension_loaded('imagick')) {
+                    $manager = new ImageManager(ImagickDriver::class);
+                    $image = $manager->decodePath($sourcePath);
+                    $image->coverDown(300, 300);
+                    $image->save($destPath);
+                } else {
+                    return response()->json([
+                        'status' => false,
+                        'message' => 'Image library not found'
+                    ]);
+                }
 
             }
         }
