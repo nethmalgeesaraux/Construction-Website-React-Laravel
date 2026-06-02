@@ -46,6 +46,29 @@ class ServiceController extends Controller
             ]);
         }
 
+        $tempImage = null;
+        $sourcePath = null;
+
+        if ($request->imageId > 0) {
+            $tempImage = TempImage::find($request->imageId);
+
+            if ($tempImage == null) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Temp image not found. Please upload image again.'
+                ], 422);
+            }
+
+            $sourcePath = public_path('uploads/temp/' . $tempImage->name);
+
+            if (!file_exists($sourcePath)) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Temp image file not found. Please upload image again.'
+                ], 422);
+            }
+        }
+
         $model = new Service();
         $model->title = $request->title;
         $model->short_desc = $request->short_desc;
@@ -53,6 +76,54 @@ class ServiceController extends Controller
         $model->content = $request->content;
         $model->status = $request->status;
         $model->save();
+
+        if ($tempImage != null) {
+            $extArray = explode('.', $tempImage->name);
+            $ext = last($extArray);
+            $fileName = strtotime('now') . $model->id . '.' . $ext;
+
+            $smallPath = public_path('uploads/services/small');
+            $largePath = public_path('uploads/services/large');
+
+            if (!is_dir($smallPath)) {
+                mkdir($smallPath, 0755, true);
+            }
+
+            if (!is_dir($largePath)) {
+                mkdir($largePath, 0755, true);
+            }
+
+            $smallDestPath = $smallPath . '/' . $fileName;
+            $largeDestPath = $largePath . '/' . $fileName;
+
+            if (extension_loaded('gd')) {
+                $manager = new ImageManager(GdDriver::class);
+
+                $image = $manager->decodePath($sourcePath);
+                $image->coverDown(500, 600);
+                $image->save($smallDestPath);
+
+                $image = $manager->decodePath($sourcePath);
+                $image->scaleDown(1200);
+                $image->save($largeDestPath);
+            } elseif (extension_loaded('imagick')) {
+                $manager = new ImageManager(ImagickDriver::class);
+
+                $image = $manager->decodePath($sourcePath);
+                $image->coverDown(500, 600);
+                $image->save($smallDestPath);
+
+                $image = $manager->decodePath($sourcePath);
+                $image->scaleDown(1200);
+                $image->save($largeDestPath);
+            } else {
+                copy($sourcePath, $smallDestPath);
+                copy($sourcePath, $largeDestPath);
+            }
+
+            $model->image = $fileName;
+            $model->save();
+        }
 
         return response()->json([
             'status' => true,
