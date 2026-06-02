@@ -117,6 +117,29 @@ class ServiceController extends Controller
             ]);
         }
 
+        $tempImage = null;
+        $sourcePath = null;
+
+        if ($request->imageId > 0) {
+            $tempImage = TempImage::find($request->imageId);
+
+            if ($tempImage == null) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Temp image not found. Please upload image again.'
+                ], 422);
+            }
+
+            $sourcePath = public_path('uploads/temp/' . $tempImage->name);
+
+            if (!file_exists($sourcePath)) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Temp image file not found. Please upload image again.'
+                ], 422);
+            }
+        }
+
         $service->title = $request->title;
         $service->short_desc = $request->short_desc;
         $service->slug = Str::slug($request->slug);
@@ -126,37 +149,53 @@ class ServiceController extends Controller
 
 
         // Save Temp Image here
-        if ($request->imageId > 0) {
-            $tempImage = TempImage::find($request->imageId);
-            if ($tempImage != null) {
-                $extArray = explode('.', $tempImage->name);
-                $ext = last($extArray);
-                $fileName = strtotime('now') . $service->id . '.' . $ext;
-                
-                //create  small thumbnail here
-                $sourcePath = public_path('uploads/temp/' . $tempImage->name);
-                $destPath = public_path('uploads/services/thumb/' . $fileName);
-                if (!is_dir(public_path('uploads/services/thumb'))) {
-                    mkdir(public_path('uploads/services/thumb'), 0755, true);
-                }
-                if (extension_loaded('gd')) {
-                    $manager = new ImageManager(GdDriver::class);
-                    $image = $manager->decodePath($sourcePath);
-                    $image->coverDown(300, 300);
-                    $image->save($destPath);
-                } elseif (extension_loaded('imagick')) {
-                    $manager = new ImageManager(ImagickDriver::class);
-                    $image = $manager->decodePath($sourcePath);
-                    $image->coverDown(300, 300);
-                    $image->save($destPath);
-                } else {
-                    return response()->json([
-                        'status' => false,
-                        'message' => 'Image library not found'
-                    ]);
-                }
+        if ($tempImage != null) {
+            $extArray = explode('.', $tempImage->name);
+            $ext = last($extArray);
+            $fileName = strtotime('now') . $service->id . '.' . $ext;
 
+            // Create small thumbnail here
+            $smallPath = public_path('uploads/services/small');
+            $largePath = public_path('uploads/services/large');
+
+            if (!is_dir($smallPath)) {
+                mkdir($smallPath, 0755, true);
             }
+
+            if (!is_dir($largePath)) {
+                mkdir($largePath, 0755, true);
+            }
+
+            $smallDestPath = $smallPath . '/' . $fileName;
+            $largeDestPath = $largePath . '/' . $fileName;
+
+            if (extension_loaded('gd')) {
+                $manager = new ImageManager(GdDriver::class);
+
+                $image = $manager->decodePath($sourcePath);
+                $image->coverDown(500, 600);
+                $image->save($smallDestPath);
+
+                $image = $manager->decodePath($sourcePath);
+                $image->scaleDown(1200);
+                $image->save($largeDestPath);
+            } elseif (extension_loaded('imagick')) {
+                $manager = new ImageManager(ImagickDriver::class);
+
+                $image = $manager->decodePath($sourcePath);
+                $image->coverDown(500, 600);
+                $image->save($smallDestPath);
+
+                $image = $manager->decodePath($sourcePath);
+                $image->scaleDown(1200);
+                $image->save($largeDestPath);
+            } else {
+                copy($sourcePath, $smallDestPath);
+                copy($sourcePath, $largeDestPath);
+            }
+
+            $service->image = $fileName;
+            $service->save();
         }
 
 
